@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Wavely - Đăng ký</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="nav"></header>
+    <div class="box">
+      <h1>Tạo tài khoản</h1>
+      <div id="error" class="alert" hidden></div>
+      <form id="form" novalidate>
+        <input name="username" placeholder="Username" />
+        <input name="email" type="email" placeholder="Email" />
+        <input
+          name="password"
+          type="password"
+          placeholder="Mật khẩu (tối thiểu 8 ký tự, có chữ hoa, số, ký tự đặc biệt)"
+        />
+        <input name="display_name" placeholder="Tên hiển thị" />
+        <textarea
+          name="bio"
+          rows="2"
+          placeholder="Giới thiệu bản thân"
+        ></textarea>
+        <input name="country" placeholder="Quốc gia" />
+        <button class="btn" id="submit">Đăng ký</button>
+      </form>
+      <p class="alt">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Wavely - Trang chủ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="nav"></header>
+    <main>
+      <div class="hero">
+        <span class="tag">🎧 Âm nhạc không giới hạn</span>
+        <h1>Nghe nhạc theo <span>cách của riêng bạn</span></h1>
+        <p>
+          Khám phá nghệ sĩ, album, bài hát và playlist mới mỗi ngày, tất cả ở
+          một nơi.
+        </p>
+        <a class="btn" href="#artists-sec">Khám phá ngay</a>
+      </div>
+
+      <section id="artists-sec">
+        <div class="sec-head"><h2>Nghệ sĩ nổi bật</h2></div>
+        <div class="row" id="artists"></div>
+      </section>
+      <section>
+        <div class="sec-head"><h2>Album</h2></div>
+        <div class="row" id="albums"></div>
+      </section>
+      <section>
+        <div class="sec-head"><h2>Bài hát thịnh hành</h2></div>
+        <div class="tracks" id="tracks"></div>
+      </section>
+      <!-- <section>
+        <div class="sec-head"><h2>Playlists</h2></div>
+        <div class="row" id="playlists"></div>
+      </section> -->
+    </main>
+    <div class="player" id="player" hidden>
+      <img id="playerImg" alt="" />
+      <div class="player-info">
+        <b id="playerName"></b>
+        <small id="playerArtist"></small>
+      </div>
+      <audio id="audio" controls></audio>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
