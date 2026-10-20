@@ -1,5 +1,11 @@
 renderNav();
 
+function toHttps(url) {
+  if (typeof url === "string") {
+    return url.replace("http://", "https://");
+  }
+  return url;
+}
 const ARTISTS_URL = "/api/artists?limit=20&offset=0";
 const ALBUMS_URL = "/api/albums?limit=20&offset=0";
 const TRACKS_URL = "/api/tracks?limit=50&offset=0";
@@ -36,23 +42,22 @@ function getList(response) {
 }
 
 function getImage(item) {
-  return (
+  return toHttps(
     item.image_url ||
-    item.cover_url ||
-    item.cover_image_url ||
-    item.avatar_url ||
-    item.thumbnail ||
-    item.image ||
-    item.album_cover_image_url ||
-    item.artist_image_url ||
-    ""
+      item.cover_url ||
+      item.cover_image_url ||
+      item.avatar_url ||
+      item.thumbnail ||
+      item.image ||
+      item.album_cover_image_url ||
+      item.artist_image_url ||
+      "",
   );
 }
 
 function getAudio(item) {
-  return item.audio_url || "";
+  return toHttps(item.audio_url || "");
 }
-
 function getName(item) {
   return item.name || item.title || "Không có tên";
 }
